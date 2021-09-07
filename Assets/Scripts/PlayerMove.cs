@@ -13,15 +13,19 @@ public class PlayerMove : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject settingMenu;
     public GameObject winPanel;
+    public GameObject intropanel;
 
     public bool dead = false;
     public bool paused = false;
+    private Rigidbody rb;
     
     /// <summary>
     /// resets need on game start for replay ability
     /// </summary>
     void Start()
     {
+       
+        
         paused = false;
         gameover.SetActive(false);
         Time.timeScale = 1;
@@ -91,6 +95,7 @@ public class PlayerMove : MonoBehaviour
     public void replay() => SceneManager.LoadScene(1);
     public void exit() => Application.Quit();
     public void MainMenu() => SceneManager.LoadScene(0);
+    public void CLoseIntro() => intropanel.SetActive(false);
 /// <summary>
 /// win game
 /// </summary>

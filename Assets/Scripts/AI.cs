@@ -13,7 +13,12 @@ public class AI : MonoBehaviour
     public NavMeshAgent Guard;
     private bool randompath = false;
     [SerializeField]private Vector3 randomLoc;
-    
+    Rigidbody AIrb;
+
+    private void Start()
+    {
+        
+    }
 
     /// <summary>
     /// creates floats to calculate distance from player and end of path
